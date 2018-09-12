@@ -503,6 +503,7 @@ table {
 }
 
 table, .table {
+    margin-top: 1rem;
     width: 100%;
     background: #fff;
     border-radius: 5px;
@@ -1698,7 +1699,10 @@ header .pull-right > * {
     border-top-right-radius: 5px;
 }
 .lang_enFirewall .cbi-tabmenu .cbi-tab,
-.lang_enFirewall .cbi-tabmenu > li:hover {
+.lang_enFirewall .cbi-tabmenu > li:hover,
+.node-network-network .cbi-section .cbi-tabmenu,
+.node-network-network .cbi-section .cbi-tabmenu .cbi-tab,
+.node-network-network .cbi-section .cbi-tabmenu .cbi-tab-disabled:hover {
     border-radius: 0;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
