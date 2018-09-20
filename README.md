@@ -20,10 +20,10 @@ LuCI Theme Bootstrap: Copyright 2012 Nut & Bolt
 Licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0
 
 # Screenshot
-![image](https://raw.githubusercontent.com/yglb/PictureStorageArea/master/login.png) 
+![image](https://raw.githubusercontent.com/yglb/PictureStorageArea/master/loggin-pc.png) 
 
-![image](https://raw.githubusercontent.com/yglb/PictureStorageArea/master/logged.png) 
+![image](https://raw.githubusercontent.com/yglb/PictureStorageArea/master/logged-pc.apng) 
 
-![image](https://raw.githubusercontent.com/yglb/PictureStorageArea/master/iphone-login.png) 
+![image](https://raw.githubusercontent.com/yglb/PictureStorageArea/master/loggin-and.png) 
 
-![image](https://raw.githubusercontent.com/yglb/PictureStorageArea/master/iphone-logged.png) 
+![image](https://raw.githubusercontent.com/yglb/PictureStorageArea/master/logged-and.png) 
