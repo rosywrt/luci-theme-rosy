@@ -365,7 +365,6 @@ header .brand {
   text-decoration: none;
 }
 .main > .main-left .nav > li {
-  padding: 0.5rem 1rem;
   cursor: pointer;
 }
 .main > .main-left .nav > .slide {
@@ -374,14 +373,14 @@ header .brand {
 .main > .main-left .nav > .slide > ul {
   display: none;
 }
-.main > .main-left .nav > .slide > .menu {
+.main > .main-left .nav > li > a {
   display: block;
   padding: 0.5rem 1rem;
   text-decoration: none;
   cursor: default;
   font-size: 1.15rem;
 }
-.main > .main-left .nav > .slide > .menu:hover {
+.main > .main-left .nav > li > a:hover {
   background: #b9c9c7;
 }
 .main > .main-left .nav > .slide:hover {
@@ -406,19 +405,6 @@ header .brand {
 .main > .main-left .nav > .slide > .slide-menu > .active:hover {
   background-color: #556270;
   cursor: hand;
-}
-.main > .main-left .logout {
-  position: absolute;
-  bottom: 2%;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-.main > .main-left .nav > .logout a {
-  padding-left: 22px;
-  font-size: 18px;
-  display: inline-block;
-  background: url(./logout-black.png) no-repeat center left;
 }
 li {
   list-style-type: none;
@@ -451,7 +437,7 @@ h4 {
 }
 .cbi-section {
   margin: 1rem 0 0 0;
-  padding: 2rem;
+  padding: 1rem;
   border: 0;
   font-weight: 400;
   font-style: normal;
@@ -459,7 +445,6 @@ h4 {
   font-family: inherit;
   min-width: inherit;
   background-color: #fff;
-  -webkit-overflow-scrolling: touch;
 }
 .logged-in .cbi-section {
   border-radius: 10px;
@@ -1645,6 +1630,17 @@ header .pull-right > * {
   border: none;
   border-bottom: 1px solid #d4d4d4;
 }
+.node-system-packages .cbi-value-last #swfreespace {
+  margin: 10px 0 !important;
+  border-radius: 10px;
+  background-color: #669492 !important;
+  border: none !important;
+}
+.node-system-packages .cbi-value-last #swfreespace > div {
+  border-radius: 10px;
+  background-color: #FF6670 !important;
+  border: none !important;
+}
 .node-system-flashops form.inline + form.inline {
   margin-left: 0;
 }
@@ -1716,7 +1712,7 @@ header .fill .container p.brand {
   display: none;
 }
 @media screen and (max-width: 1420px) {
-  .main > .main-left .nav > .slide > .menu {
+  .main > .main-left .nav > li > a {
     padding-left: 0.5rem;
     font-size: 14px;
   }
@@ -1734,6 +1730,11 @@ header .fill .container p.brand {
   .node-main-login > .main .cbi-page-actions input {
     height: 36px;
     width: 82%;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .node-status-processes .cbi-section {
+    overflow-x: scroll;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -1883,7 +1884,7 @@ header .fill .container p.brand {
     position: static;
     text-align: left;
   }
-  .main > .main-left .nav > .slide > .menu {
+  .main > .main-left .nav > li > a {
     font-size: 26px;
     padding-left: 1rem;
     color: #fff;
@@ -1909,13 +1910,6 @@ header .fill .container p.brand {
     width: 100%;
     float: none;
     margin-top: 88px;
-  }
-  .logged-in .main > .main-left .logout {
-    bottom: 1%;
-  }
-  .logged-in .main > .main-left .logout a {
-    font-size: 20px;
-    background-image: url(./logout-white.png);
   }
   .node-status-processes .cbi-section {
     padding: 0;
@@ -2050,7 +2044,7 @@ header .fill .container p.brand {
   body {
     font-size: 1rem;
   }
-  .main > .main-left .nav > .slide > .menu {
+  .main > .main-left .nav > li > a {
     font-size: 1.3rem;
   }
   .main > .main-left .nav > .slide > .slide-menu > li > a {
