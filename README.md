@@ -1,14 +1,21 @@
 # LuCI Rosy Theme
 
 ## About
-Rosy is a concise and flat theme based on OpenWrt's web management interface. And it is based on luci-theme-material and JQ.
+Rosy is a concise and flat theme based on OpenWrt's web management interface. And it is based on luci-theme-material and JQ. **openwrt-18.06** branch is recommended if you are interested in this project.
 
-## Bugs
+## Usage
+* If there's a previous LuCI in your buildroot, clone this project to one of directory under package/xxx.
+
+* Otherwise you can use LuCI feed from [here](https://github.com/rosywrt/luci).
+
+## Contact
+* Bug Report : https://github.com/rosywrt/luci-theme-rosy/issues
+
+* QQ Gourp : 428742246
+
+## Bug Report
 Have a bug? Please create an issue on GitHub!
 https://github.com/rosywrt/luci-theme-rosy/issues
-
-## Copyright
-RosyWrt Team : https://github.com/rosywrt
 
 ## License
 LuCI Theme Rosy: Copyright 2018 RosyWrt
