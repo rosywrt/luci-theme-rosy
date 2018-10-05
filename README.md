@@ -12,7 +12,9 @@ RosyWrt Team : https://github.com/rosywrt
 
 ## License
 LuCI Theme Rosy: Copyright 2018 RosyWrt
+
 LuCI Theme Material: Copyright 2015 Lutty Yang
+
 LuCI Theme Bootstrap: Copyright 2012 Nut & Bolt
 
 Licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0
