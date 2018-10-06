@@ -13,10 +13,6 @@ Rosy is a concise and flat theme based on OpenWrt's web management interface. An
 
 * QQ Gourp : 428742246
 
-## Bug Report
-Have a bug? Please create an issue on GitHub!
-https://github.com/rosywrt/luci-theme-rosy/issues
-
 ## License
 LuCI Theme Rosy: Copyright 2018 RosyWrt
 
