@@ -23,11 +23,11 @@ LuCI Theme Bootstrap: Copyright 2012 Nut & Bolt
 Licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0
 
 ## Previews on PC
-![loggin-pc](https://raw.githubusercontent.com/rosywrt/luci-theme-rosy/master/previews/loggin-pc.png)
+<div align=center><img src="https://raw.githubusercontent.com/rosywrt/luci-theme-rosy/master/previews/loggin-pc.png" alt="login-pc"/></div>
 
-![overview-pc](https://raw.githubusercontent.com/rosywrt/luci-theme-rosy/master/previews/overview-pc.png)
+<div align=center><img src="https://raw.githubusercontent.com/rosywrt/luci-theme-rosy/master/previews/overview-pc.png" alt="overview-pc"/></div>
 
 ## Previews on Cell Phone
-![loggin-mobile](https://raw.githubusercontent.com/rosywrt/luci-theme-rosy/master/previews/loggin-mobile.png)
+<div align=center><img src="https://raw.githubusercontent.com/rosywrt/luci-theme-rosy/master/previews/loggin-mobile.png" alt="login-mobile"/></div>
 
-![overview-mobile](https://raw.githubusercontent.com/rosywrt/luci-theme-rosy/master/previews/overview-mobile.png)
+<div align=center><img src="https://raw.githubusercontent.com/rosywrt/luci-theme-rosy/master/previews/overview-mobile.png" alt="overview-mobile"/></div>
