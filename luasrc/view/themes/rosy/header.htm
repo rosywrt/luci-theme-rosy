@@ -1,19 +1,19 @@
-<%#
+<%#                                   
     Rosy is a theme for LuCI. It is based on luci-theme-bootstrap
-
     luci-theme-rosy
         Copyright 2018 Rosy Song <rosysong@rosinson.com>
         Copyright 2018 Yan Lan Shen <yanlan.shen@rosinson.com>
-
+    
     Have a bug? Please create an issue here on GitHub!
         https://github.com/rosywrt/luci-theme-rosy/issues
 
     luci-theme-bootstrap:
-    Copyright 2008 Steven Barth <steven@midlink.org>
-    Copyright 2008 Jo-Philipp Wich <jow@openwrt.org>
-    Copyright 2012 David Menting <david@nut-bolt.nl>
+        Copyright 2008 Steven Barth <steven@midlink.org>
+        Copyright 2008 Jo-Philipp Wich <jow@openwrt.org>
+        Copyright 2012 David Menting <david@nut-bolt.nl>
 
     Licensed to the public under the Apache License 2.0
+
 -%>
 
 <%
@@ -120,38 +120,56 @@
 		end
 	end
 
-	local function render_topmenu() 
+	local function render_topmenu()
 		local childs = disp.node_childs(cattree)
-		
 		if #childs > 0 then
-				write('<ul class="nav">')
-					
-					for i, r in ipairs(childs) do
-							local nnode = cattree.nodes[r]
-							local grandchildren = disp.node_childs(nnode)
-							
-							if #grandchildren > 0 then
-									local title = pcdata(striptags(translate(nnode.title)))
-									write('<li class="slide"><a class="menu" data-title="%s" href="#">%s</a>' %{
-											title,
-											title
-									})  
-									render_submenu(category .. "/" .. r, nnode)
-									write('</li>') 
-							else 
-									local title = pcdata(striptags(translate(nnode.title)))
-									write('<li><a data-title="%s" href="%s">%s</a></li>' %{
-											title,
-											nodeurl(category, r, nnode.query),
-											title   
-									})
-							end
+			write('<ul class="nav">')
 
-					end
+			for i, r in ipairs(childs) do
+				local nnode = cattree.nodes[r]
+				local grandchildren = disp.node_childs(nnode)
 
-				write('</ul>')
-		end                                                                                                                                                                                                  
+				if #grandchildren > 0 then
+					local title = pcdata(striptags(translate(nnode.title)))
+
+					write('<li class="slide"><a class="menu" data-title="%s" href="#">%s</a>' %{
+						title,
+						title
+					})
+
+					render_submenu(category .. "/" .. r, nnode)
+					write('</li>')
+				end
+			end
+
+			write('</ul>')
+		end
 	end
+
+        local function render_logout()                                                                             
+                local childs = disp.node_childs(cattree)                               
+                if #childs > 0 then                                                                                 
+                                                                                               
+                        for i, r in ipairs(childs) do                                     
+                                local nnode = cattree.nodes[r]                                                      
+                                local grandchildren = disp.node_childs(nnode)          
+                                                                                                                    
+                                if #grandchildren > 0 then                                
+                                                                                          
+                                else                                               
+                                        local title = pcdata(striptags(translate(nnode.title)))                      
+                                                                                          
+                                        write('<span class="label logout"><a data-title="%s" href="%s">%s</a></span>' %{                      
+                                                title,                                    
+                                                nodeurl(category, r, nnode.query),                                   
+                                                title                              
+                                        })                                                                           
+                                end                                                       
+                        end                                                                                          
+                                                                                          
+                end                                                      
+        end                                                                                                          
+
 
 	local function render_changes()
 		-- calculate the number of unsaved changes
@@ -167,7 +185,7 @@
 			end
 
 			if ucichanges > 0 then
-				write('<a class="uci_change_indicator label notice" href="%s?redir=%s">%s: %d</a>' %{
+				write('<a class="uci_change_indicator label notice" href="%s?redir=%s"><span class="mobile-hide">%s:</span> %d</a>' %{
 					url(category, 'uci/changes'),
 					http.urlencode(http.formvalue('redir') or table.concat(disp.context.request, "/")),
 					translate('Unsaved Changes'),
@@ -218,19 +236,12 @@
 </head>
 
 <body class="lang_<%=luci.i18n.context.lang%> <%- if node then %><%= striptags( node.title ) %><%- end %> <% if luci.dispatcher.context.authsession then %>logged-in<% end %>">
-
-	<div class="main">
-		<div style="" class="loading">
-			<span>
-				<div class="loading-img"><img src="<%=media%>/loading.svg"></div>
-				<p>Loading...</p>
-			</span>
-		</div>
-		<div class="main-left">
-			<header>
-				<a class="brand" href="#">
-					<%=boardinfo.hostname or "?"%></a>
-				<div class="refresh">
+	<header>
+		<div class="fill">
+			<div class="container">
+				<span class="showSide"></span>
+				<a class="brand" href="#"><%=boardinfo.hostname or "?"%></a>
+				<div class="btn-con pull-right">
 					<% render_changes() %>
 					<span id="xhr_poll_status" style="display:none" onclick="XHR.running() ? XHR.halt() : XHR.run()">
 						<span class="label success" id="xhr_poll_status_on"><span class="mobile-hide">
@@ -240,17 +251,33 @@
 								<%:Auto Refresh%></span>
 							<%:off%></span>
 					</span>
-					<span class="showSide"></span>
+					<% render_logout() %>
 				</div>
-			</header>
+			</div>
+		</div>
+	</header>
+	<div class="main">
+		<div style="" class="loading"><span>
+				<div class="loading-img">
+					<img src="<%=media%>/loading.svg">
+				</div>Loading...
+			</span></div>
+		<div class="main-left">
 			<div class="nav-container">
-				<% render_topmenu() %>
+				<a class="brand" href="#">
+					<%=boardinfo.hostname or "?"%></a>
+				<div class="navbar-container">
+					<% render_topmenu() %>
+				</div>
 			</div>
 		</div>
 		<div class="main-right">
-			<div class="darkMask"></div>
 			<div id="maincontent">
 				<div class="container">
+					<div class="logoImg">
+						<img src="<%=media%>/logo.png" alt="Rosy">
+						<a class="brand" href="#"><%=boardinfo.hostname or "?"%></a>
+					</div>
 					<%- if luci.sys.process.info("uid") == 0 and luci.sys.user.getuser("root") and not luci.sys.user.getpasswd("root") then -%>
 					<div class="alert-message warning">
 						<h4>
@@ -259,11 +286,7 @@
 						<p>
 							<%:There is no password set on this router. Please configure a root password to protect the web interface and enable SSH.%>
 						</p>
-						<div class="left"><a class="btn" href="<%=url(" admin/system/admin")%>"> <%:Go to password configuration...%></a></div>
-					</div>
-					<%- else -%>
-					<div class="line-draft">
-						<img src="<%=media%>/line-draft.png" alt="WR818 Shell">
+						<div><a class="btn" href="<%=url(" admin/system/admin")%>"> <%:Go to password configuration...%></a></div>
 					</div>
 					<%- end -%>
 
