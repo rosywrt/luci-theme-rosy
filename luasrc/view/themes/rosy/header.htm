@@ -221,7 +221,7 @@
 	<link rel="icon" href="<%=media%>/logo.png" sizes="144x144">
 	<link rel="apple-touch-icon-precomposed" href="<%=media%>/logo.png" sizes="144x144">
 
-	<link rel="stylesheet" href="<%=media%>/cascade.css">
+	<link rel="stylesheet" href="<%=media%>/cascade.css?v=git-18.247.71242-9541751">
 	<link rel="shortcut icon" href="<%=media%>/favicon.ico">
 	<% if node and node.css then %>
 	<link rel="stylesheet" href="<%=resource%>/<%=node.css%>">
@@ -231,8 +231,8 @@
 		<%=css %>
 	</style>
 	<% end -%>
-	<script src="<%=resource%>/cbi.js"></script>
-	<script src="<%=resource%>/xhr.js"></script>
+	<script src="<%=resource%>/cbi.js?v=git-18.247.71242-9541751"></script>
+	<script src="<%=resource%>/xhr.js?v=git-18.247.71242-9541751"></script>
 </head>
 
 <body class="lang_<%=luci.i18n.context.lang%> <%- if node then %><%= striptags( node.title ) %><%- end %> <% if luci.dispatcher.context.authsession then %>logged-in<% end %>">
@@ -273,11 +273,12 @@
 		</div>
 		<div class="main-right">
 			<div id="maincontent">
+				<div class="logoImg">                                                       
+                                        <img class="mobile-hide" src="<%=media%>/logo.png" alt="Rosy">                                                                 
+                                        <img src="<%=media%>/mobile-loginBG.png" class="PC-hide">
+                                	<a class="brand" href="#"><%=boardinfo.hostname or "?"%></a>                             
+                                </div>
 				<div class="container">
-					<div class="logoImg">
-						<img src="<%=media%>/logo.png" alt="Rosy">
-						<a class="brand" href="#"><%=boardinfo.hostname or "?"%></a>
-					</div>
 					<%- if luci.sys.process.info("uid") == 0 and luci.sys.user.getuser("root") and not luci.sys.user.getpasswd("root") then -%>
 					<div class="alert-message warning">
 						<h4>
