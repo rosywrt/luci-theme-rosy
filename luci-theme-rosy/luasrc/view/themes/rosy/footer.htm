@@ -1,9 +1,9 @@
-<%#                                   
+<%#
     Rosy is a theme for LuCI. It is based on luci-theme-bootstrap
     luci-theme-rosy
         Copyright 2018 Rosy Song <rosysong@rosinson.com>
         Copyright 2018 Yan Lan Shen <yanlan.shen@rosinson.com>
-    
+
     Have a bug? Please create an issue here on GitHub!
         https://github.com/rosywrt/luci-theme-rosy/issues
 
@@ -40,11 +40,12 @@
     <% end %>
 </footer>
 
-<script>                                         
+<script>
     var luciLocation = <%= luci.http.write_json(luci.dispatcher.context.path) %>;
 </script>
-<script src="<%=media%>/js/jquery.min.js?v=git-18.247.71242-9541751"></script>
-<script src="<%=media%>/js/script.js?v=git-18.247.71242-9541751"></script>
+<script src="<%=media%>/js/jquery.min.js"></script>
+<script src="<%=media%>/js/script.js"></script>
 </body>
 
 </html>
+
