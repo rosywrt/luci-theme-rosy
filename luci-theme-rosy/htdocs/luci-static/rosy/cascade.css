@@ -789,6 +789,8 @@ td > table > tbody > tr > td,
 .tabs > li a {
     color: #468EA4;
     font-size: 14px;
+    position: relative;
+    z-index: 1;
 }
 .tabs > li::after {
     content: '';
