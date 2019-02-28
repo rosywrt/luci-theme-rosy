@@ -262,12 +262,15 @@
         }
     }
 
-    $('.login > .main .cbi-value-last .cbi-value-field').click(function(){
-        var thisClassName = $(this).attr('class');
-        if( thisClassName.indexOf('op-eye') == (-1) ){
-            $(this).addClass('op-eye');
+    $('<div>').appendTo('.login > .main .cbi-value-last .cbi-value-field');
+    $('.login > .main .cbi-value-last .cbi-value-field > div').click(function(){
+        var thisParent = $(this).parent();
+        if( thisParent.attr('class').indexOf('op-eye') == (-1) ){
+            thisParent.addClass('op-eye');
+            $(this).prev().attr('type', 'text');
         }else {
-            $(this).removeClass('op-eye');
+            thisParent.removeClass('op-eye');
+            $(this).prev().attr('type', 'password');
         }
         
     });

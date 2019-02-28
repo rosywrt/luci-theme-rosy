@@ -1685,8 +1685,7 @@ header > .container > .pull-right > * {
     position: relative;
 }
 
-.login > .main .cbi-value-last .cbi-value-field::after {
-    content: '';
+.login > .main .cbi-value-last .cbi-value-field > div {
     height: 24px;
     width: 24px;
     display: inline-block;
@@ -1696,12 +1695,11 @@ header > .container > .pull-right > * {
     right: 12px;
 }
 
-.login > .main .cbi-value-last .cbi-value-field.op-eye::after {
+.login > .main .cbi-value-last .cbi-value-field.op-eye > div {
     background-image: url(./cl-eye.png);
 }
 
-.login > .main .cbi-value .cbi-input-text[type="text"],
-.login > .main .cbi-value .cbi-input-text[type="password"] {
+.login > .main .cbi-value .cbi-input-text {
 	margin: 0 0 16px;
 	padding-left: 36px;
 	width: 100%;
@@ -1711,11 +1709,11 @@ header > .container > .pull-right > * {
 	background: #fff no-repeat 11px center / 19px;
 }
 
-.login > .main .cbi-value .cbi-input-text[type="text"] {
+.login > .main .cbi-value .cbi-input-text {
 	background-image: url(./user.png);
 }
 
-.login > .main .cbi-value .cbi-input-text[type="password"] {
+.login > .main .cbi-value-last .cbi-input-text {
 	background-image: url(./pwd.png);
 }
 
@@ -2198,6 +2196,12 @@ body.lang_pl.login .cbi-value-title {
         margin: 0 1rem 1.5rem 1rem;
     }
 
+    .login > .main .container {
+        margin: 0 auto;
+        min-width: auto;
+        width: 90%;
+    }
+
     .main > .main-left .nav > .slide > .menu {
         font-size: 1.3rem;
     }
@@ -2256,6 +2260,10 @@ body.lang_pl.login .cbi-value-title {
     .login > .main fieldset {
         margin: 0;
         padding: 0.5rem;
+    }
+
+    .login .alert-message a {
+        white-space: normal;
     }
 
     h2 {
