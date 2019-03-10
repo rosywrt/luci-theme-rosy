@@ -11,6 +11,9 @@ Rosy is a concise and flat theme based on OpenWrt's web management interface. An
 ## Contact
 * Bug Report : https://github.com/rosywrt/luci-theme-rosy/issues
 
+**NOTE!!!** Currently, we don't maintain the issues led by images built from other source except [openwrt](https://github.com/openwrt/openwrt) and [luci](https://github.com/openwrt/luci).
+Please report bugs to the corresponding owner.
+
 * QQ Gourp : 428742246
 
 ## License
