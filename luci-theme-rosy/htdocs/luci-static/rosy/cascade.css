@@ -1749,7 +1749,8 @@ header > .container > .pull-right > * {
     display: block;
     position: fixed;
     top: 1rem;
-    right: 1rem;
+    right: 2rem;
+    left: 2rem;
     border: 1px solid #ddd;
     background-color: #fff;
     border-radius: 20px;
@@ -1967,7 +1968,7 @@ body.lang_pl.login .cbi-value-title {
     }
 
     .logged-in header {
-        width: calc(100% - 2rem);
+        width: auto;
     }
 
     .showSide {
