@@ -1967,12 +1967,7 @@ body.lang_pl.login .cbi-value-title {
     }
 
     .logged-in header {
-        top: 0;
-        left: 0;
-        width: 100%;
-        border-radius: 0;
-        border: none;
-        border-bottom: 1px solid #ddd;
+        width: calc(100% - 2rem);
     }
 
     .showSide {
@@ -2175,6 +2170,10 @@ body.lang_pl.login .cbi-value-title {
 
     .mobile-hide {
         display: none;
+    }
+
+    .logged-in .main-left .nav-container .navbar-container {
+        overflow-y: scroll;
     }
 }
 
