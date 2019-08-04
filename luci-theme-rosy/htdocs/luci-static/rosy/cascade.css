@@ -1217,7 +1217,7 @@ td > .ifacebadge,
 }
 
 .network-status-table .ifacebox-body > span {
-    flex: 10 10 auto;
+    flex: 10 10;
 }
 
 .network-status-table .ifacebox-body > div {
