@@ -4,6 +4,7 @@
  *  luci-theme-rosy
  *     Copyright 2018 Rosy Song <rosysong@rosinson.com>
  *     Copyright 2018 Yan Lan Shen <yanlan.shen@rosinson.com>
+ *     Copyright 2019 TsLenMo <tslenmo@foxmail.com>
  *
  *   Have a bug? Please create an issue here on GitHub!
  *       https://github.com/rosywrt/luci-theme-rosy/issues
@@ -36,8 +37,11 @@
 .tbody { display: table-row-group; }
 .tfoot { display: table-footer-group; }
 .td, .th {
+    line-height: normal;
     vertical-align: middle;
     text-align: center;
+    word-break:break-all;
+    word-wrap:break-word;
     display: table-cell;
     padding: .8em;
     border-bottom: 1px solid #eee;
@@ -75,7 +79,7 @@
 .col-7 { flex: 7 7 210px !important; -webkit-flex: 7 7 210px !important; }
 .col-8 { flex: 8 8 240px !important; -webkit-flex: 8 8 240px !important; }
 .col-9 { flex: 9 9 270px !important; -webkit-flex: 9 9 270px !important; }
-.col-10 { flex: 10 10 300px !important; -webkit-flex: 10 10 300px !important; }
+.col-10 { flex: 10 10 300px !important; width: 60%; -webkit-flex: 10 10 300px !important; }
 
 .cbi-button-up,
 .cbi-button-down,
@@ -817,9 +821,9 @@ td > table > tbody > tr > td,
 .cbi-section-node-tabbed {
     padding: 0;
     margin-top: 0;
-    border-bottom: 1px solid #D4D4D4;
+    /*border-bottom: 1px solid #D4D4D4;
     border-left: 1px solid #D4D4D4;
-    border-right: 1px solid #D4D4D4;
+    border-right: 1px solid #D4D4D4;*/
 }
 
 #cbi-dropbear-_dummy .table {
